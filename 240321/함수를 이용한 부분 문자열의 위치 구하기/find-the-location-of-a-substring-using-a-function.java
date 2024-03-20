@@ -3,32 +3,37 @@ import java.io.*;
 
 public class Main {
     public static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-    public static String input,purpose;
+    public static String input, pattern;
+
+    public static boolean isSubStr(int startIdx){
+        int n=input.length();
+        int m = pattern.length();
+
+        if(startIdx + m -1>=n)
+            return false;
+        
+        for(int j=0; j<m; j++){
+            if(input.charAt(startIdx+j) != pattern.charAt(j)){
+                return false;
+            }
+        }
+
+        return true;
+    }
 
     public static int printIndex(){
-        int index =-100;
-        
-        if(!input.contains(purpose)){
-            return -1;
-        }else if(input.equals(purpose)){
-            return 0;
+        int n = input.length();
+        for(int i=0; i<n; i++){
+            if(isSubStr(i)){
+                return i;
+            }
         }
-        
-        for(int j=0; j<purpose.length(); j++){
-            for(int i=0; i<input.length(); i++){
-                if(purpose.charAt(j)==input.charAt(i)) {
-                
-                    index=purpose.length()>1 ? i-(purpose.length()-1) : i;
-                }
-            } 
-        }
-     
-        return index;
+        return -1;
     }
 
     public static void main(String[] args) throws IOException{
         input = br.readLine();
-        purpose = br.readLine();
+        pattern = br.readLine();
 
         System.out.println(printIndex());
 
