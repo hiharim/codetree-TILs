@@ -10,6 +10,8 @@ public class Main {
         
         if(!input.contains(purpose)){
             return -1;
+        }else if(input.equals(purpose)){
+            return 0;
         }
 
         for(int i=0; i<input.length(); i++){
