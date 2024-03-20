@@ -16,17 +16,7 @@ public class Main {
     
     }
      public static String solution(int a, int b){
-        int small = 0;
-        int big = 0;
-        if(a>b){
-            big = a;
-            small = b;
-        }else{
-            big = b;
-            small = a;
-        }
-    
-        String result= new String(small+10+" "+big*2);
+        String result= a>b ? b+10+" "+a*2 : a+10+" "+b*2;
         return result;
     }
 }
