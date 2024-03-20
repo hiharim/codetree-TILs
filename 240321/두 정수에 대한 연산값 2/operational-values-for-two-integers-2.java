@@ -16,7 +16,9 @@ public class Main {
     
     }
      public static String solution(int a, int b){
-        String result= a>b ? b+10+" "+a*2 : a+10+" "+b*2;
+        // a 와 b 를 순서대로 출력해야함
+        String result= a>b ?a*2 +" "+b+10 : a+10+" "+b*2;
+
         return result;
     }
 }
