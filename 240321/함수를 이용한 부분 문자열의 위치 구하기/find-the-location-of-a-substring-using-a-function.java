@@ -18,7 +18,7 @@ public class Main {
             for(int i=0; i<input.length(); i++){
                 if(purpose.charAt(j)==input.charAt(i)) {
                 
-                    index=purpose.length()>1 ? i-1 : i;
+                    index=purpose.length()>1 ? i-(purpose.length()-1) : i;
                 }
             } 
         }
