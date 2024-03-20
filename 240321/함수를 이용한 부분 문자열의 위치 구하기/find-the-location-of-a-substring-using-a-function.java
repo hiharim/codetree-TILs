@@ -13,15 +13,16 @@ public class Main {
         }else if(input.equals(purpose)){
             return 0;
         }
-
-        for(int i=0; i<input.length(); i++){
-            for(int j=0; j<purpose.length(); j++){
-                if(purpose.charAt(j)==input.charAt(i)){
+        
+        for(int j=0; j<purpose.length(); j++){
+            for(int i=0; i<input.length(); i++){
+                if(purpose.charAt(j)==input.charAt(i)) {
                 
-                    index=i-1;
+                    index=purpose.length()>1 ? i-1 : i;
                 }
             } 
         }
+     
         return index;
     }
 
