@@ -6,7 +6,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int n= sc.nextInt();
 
-        int[] digits = new int[n];
+        int[] digits = new int[20];
         int cnt = 0;
 
         while(true){
