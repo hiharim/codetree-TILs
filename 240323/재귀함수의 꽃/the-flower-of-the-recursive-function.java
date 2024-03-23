@@ -7,14 +7,9 @@ public class Main {
         if(n==0)
             return;
        
-         for(int i=n; i>=1; i--){
-            System.out.print(i+" ");
-            
-        }
-         for(int i=1; i<=n; i++){
-            System.out.print(i+" ");
-            
-        }
+        System.out.print(n + " ");
+        printNumber(n - 1);
+        System.out.print(n + " ");
     
     }
 
