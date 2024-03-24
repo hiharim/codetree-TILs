@@ -8,7 +8,7 @@ public class Main {
         int n = sc.nextInt();
         int k = sc.nextInt();
        
-        int[] blocks = new int[n];
+        int[] blocks = new int[100];
         int a,b;
         
         for(int i=0; i<k; i++){
